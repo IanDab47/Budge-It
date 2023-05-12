@@ -1,33 +1,94 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import "./App.less";
+
+// Components
+import Navbar from "./components/Navbar";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header>
+        <div className="title">BUDGE-IT!!</div>
+        <Navbar />
+      </header>
+
+      <section className="board">
+        <div className="projected">
+          <form>
+            <div>Add category with expected budget</div>
+
+            <div className="user-input category">
+              <label>Category Name: </label>
+              <input type="text" required />
+            </div>
+
+            <div className="user-input payment">
+              <label>Amount: </label>
+              <input type="text" value="0.00" required />
+            </div>
+
+            <button>Add Category</button>
+          </form>
+        </div>
+
+        <div className="balance">
+          <form>
+            <div>Starting balance</div>
+
+            <div className="user-input payment">
+              <label>Amount: </label>
+              <input type="text" value="0.00" required />
+            </div>
+
+            <button>Add Balance</button>
+          </form>
+        </div>
+
+        <div className="payments">
+          <form>
+            <div>Add payment with type and date</div>
+
+            <div className="user-input category">
+              <label>Category Name: </label>
+              <input type="text" required />
+            </div>
+
+            <div className="user-input date">
+              <label>Date: </label>
+              <input type="text" required />
+            </div>
+
+            <div className="user-input payment">
+              <label>Amount: </label>
+              <input type="text" value="0.00" required />
+            </div>
+
+            <button>Add Payment</button>
+          </form>
+        </div>
+
+        <div className="income">
+          <form>
+            <div>Add income with type and date</div>
+
+            <div className="user-input category">
+              <label>Category Name: </label>
+              <input type="text" required />
+            </div>
+
+            <div className="user-input date">
+              <label>Date: </label>
+              <input type="text" required />
+            </div>
+
+            <div className="user-input payment">
+              <label>Amount: </label>
+              <input type="text" value="0.00" required />
+            </div>
+
+            <button>Add Income</button>
+          </form>
+        </div>
+      </section>
     </>
   );
 }
