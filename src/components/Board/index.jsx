@@ -153,7 +153,7 @@ export default function Board() {
               <label>Category Name: </label>
               <input
                 type="text"
-                onChange={(e) => incomeCategory(e.target.value)}
+                onChange={(e) => setIncomeCategory(e.target.value)}
                 required
               />
             </div>
@@ -162,7 +162,7 @@ export default function Board() {
               <label>Date: </label>
               <input
                 type="text"
-                onChange={(e) => incomeDate(e.target.value)}
+                onChange={(e) => setIncomeDate(e.target.value)}
                 required
               />
             </div>
@@ -172,7 +172,7 @@ export default function Board() {
               <input
                 type="text"
                 value={incomeAmount}
-                onChange={(e) => incomeAmount(e.target.value)}
+                onChange={(e) => setIncomeAmount(e.target.value)}
                 required
               />
             </div>
